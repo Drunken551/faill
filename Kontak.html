@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeBle</title>
+    <link rel="icon" type="image/x-icon" href="image/logo .png">
+    <style>
+        /* ... (gaya CSS sebelumnya tetap sama) ... */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: #e8491d 3px solid;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header #branding {
+            display: flex;
+            align-items: center;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header nav li {
+            margin-left: 20px;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        .contact-section {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 60px 0;
+        }
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            text-align: center;
+            margin-bottom: 30px;
+            flex-basis: 30%;
+        }
+        .contact-item i {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #e8491d;
+        }
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .contact-item a:hover {
+            color: #e8491d;
+        }
+        .contact-item p {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .contact-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">ThreeBle</span>Shoulder bag </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Shoulde bag.html">Beranda</a></li>
+                    <li><a href="Tentang kami.html">Tentang Kami</a></li>
+                    <li class="current"><a href="Kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="contact-section">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/thre.eble" target="_blank">@thre.eble</a>
+                    <p>Ikuti kami di Instagram</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/qr/XOB2SW4RPZYKC1" target="_blank">+62 812-2268-3368</a>
+                    <p>Hubungi kami via WhatsApp</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/jTY4UaTpNex8n8J77" target="_blank">Lokasi Kami</a>
+                    <p>Jl. Gegerkalong Girang, No 9\171b, Kec. Sukasari Kota Bandung, Jawa Barat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>ThreeBle &copy; ArtBag</p>
+    </footer>
+
+</body>
+</html>

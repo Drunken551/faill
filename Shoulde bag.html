@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/logo .png">
+    <title>ThreeBle</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: #e8491d 3px solid;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header #branding {
+            display: flex;
+            align-items: center;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header nav li {
+            margin-left: 20px;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('/api/placeholder/1200/400') no-repeat 0 -150px;
+            text-align: center;
+            color: #161414;
+            padding: 50px 0;
+        }
+        .showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: #ffffff;
+            background: #e8491d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #customizer {
+            padding: 15px;
+            background: #35424a;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+        #file-upload {
+            margin: 20px 0;
+        }
+        #file-upload label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #file-upload input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #preview {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: #ffffff;
+            background: #e8491d;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #f16745;
+        }
+        #order-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .product-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        .product-item {
+            text-align: center;
+            width: 30%;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">ThreeBle</span>Shoulder bag </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="Shoulde bag.html">Beranda</a></li>
+                    <li><a href="Tentang kami.html">Tentang Kami</a></li>
+                    <li><a href="Kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div class="container">
+            <div class="product-gallery">
+                <div class="product-item">
+                    <img src="image/WhatsApp Image 2024-10-05 at 12.28.08_c98ed950.jpg" alt="Produk 1">
+                    <p>Shoulder Bag Classic</p>
+                </div>
+                <div class="product-item">
+                    <img src="image/WhatsApp Image 2024-10-05 at 12.28.09_cfe894bc.jpg" alt="Produk 2">
+                    <p>Tote Bag Artsy</p>
+                </div>
+                <div class="product-item">
+                    <img src="image/WhatsApp Image 2024-10-05 at 12.28.11_309c048d.jpg" alt="Produk 3">
+                    <p>Clutch Elegant</p>
+                </div>
+            </div>
+            <h1>Desain Tas Anda Sendiri</h1>
+            <p>Ekspresikan kreativitas Anda melalui tas unik yang Anda desain</p>
+            <a href="#customizer" class="button">Mulai Desain</a>
+        </div>
+    </section>
+
+    <section id="customizer" class="container">
+        <h2>Kustomisasi Tas Anda</h2>
+        <p>Gunakan alat kustomisasi kami untuk membuat desain tas yang sesuai dengan gaya Anda. Pilih warna, motif, dan tambahkan sentuhan personal Anda.</p>
+        
+        <div id="file-upload">
+            <label for="art-upload">Unggah Karya Seni Anda:</label>
+            <input type="file" id="art-upload" accept="image/*" onchange="previewImage(event)">
+            <p>Format yang didukung: JPG, PNG, GIF (Max. 5MB)</p>
+        </div>
+        
+        <img id="preview" src="" alt="Preview karya seni Anda">
+        <div id="order-button">
+            <a href="#" class="button">Pesan Sekarang</a>
+    </section>
+
+    <footer>
+        <p>ThreeBle &copy; ArtBag</p>
+    </footer>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                var output = document.getElementById('preview');
+                output.src = reader.result;
+                document.getElementById('order-button').style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('order-button').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
